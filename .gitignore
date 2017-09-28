@@ -5,3 +5,7 @@ node_modules/
 /stats.json
 .idea/
 /.tmp/
+yarn.lock
+yarn-error.log
+.DS_Store
+.vscode/
