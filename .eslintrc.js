@@ -1,5 +1,8 @@
 module.exports = {
   extends: [
     'eslint-config-qunar'
-  ].map(require.resolve)
+  ].map(require.resolve),
+  rules: {
+    'react/prefer-stateless-function': 0
+  }
 };

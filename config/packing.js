@@ -43,7 +43,7 @@ export default (packing) => {
 
   p.rewriteRules = {
     // 网站URL与模版的对应路由关系
-    '^/$': '/index.pug',
+    '^/$': '/homepage/index.pug',
     // API转发
     '^/api/(.*)': 'require!/mock/api/$1.js'
   };
