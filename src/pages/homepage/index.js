@@ -19,7 +19,7 @@ import './style.css';
 // });
 
 @observer
-class TestPage extends React.Component {
+class Page extends React.Component {
 
   @observable
   state = {
@@ -59,7 +59,7 @@ class TestPage extends React.Component {
     return (
       <div>
         {this.state.title} :
-        <span className="time"> {this.state.time} </span>
+        <span className="time"> {this.state.time}</span>
         <button onClick={this.handleClick}>获取时间</button>
         <button onClick={this.handleAddRemark}>新增备注</button>
         <p>日期：{this.state.localeDate}</p>
@@ -70,4 +70,4 @@ class TestPage extends React.Component {
   }
 }
 
-export default TestPage;
+export default Page;
