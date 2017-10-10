@@ -3,378 +3,89 @@ export default (req, res) => {
     data : [
       {
         "province": "新疆",
-        "hotelSeq": "test_only2_10",
         "hotelId": 4350383,
         "hotelName": "卡亚木库卡库卡葫芦集团测试酒店（测试酒店，请勿下单，订单无效）",
-        "supplierId": 520946,
-        "qid": null,
-        "hotelInName": "卡亚木库卡库卡葫芦集团测试酒店（测试酒店，请勿下单，订单无效）",
-        "directSingle": false,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "test_only2",
-        "supplierName": "卡亚木库卡库卡葫芦集团测试",
-        "city": "卡亚木库卡库卡",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL2_OTHER",
-        "country": "中国"
+        "city": "卡亚木库卡库卡"
       }, {
         "province": "新疆",
-        "hotelSeq": "test_only2_14",
         "hotelId": 14413422,
         "hotelName": "两大分销商对接测试酒店（请勿修改）（测试酒店，请勿下单，订单无效）",
-        "supplierId": 722304,
-        "qid": "100620456",
-        "hotelInName": "两大分销商对接测试酒店（请勿修改）（测试酒店，请勿下单，订单无效）",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "test_only2",
-        "supplierName": "测试包房酒店abc",
-        "city": "卡亚木库卡库卡",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL5_LUXURIOUS",
-        "country": "中国"
+        "city": "卡亚木库卡库卡"
       }, {
         "province": "比奥比奥",
-        "hotelSeq": "test_only2_11",
         "hotelId": 4692941,
         "hotelName": "卡亚木库卡库卡葫芦单体测试酒店（测试酒店，请勿下单，订单无效）",
-        "supplierId": 531656,
-        "qid": "100506924",
-        "hotelInName": "卡亚木库卡库卡葫芦单体测试酒店（测试酒店，请勿下单，订单无效）",
-        "directSingle": false,
-        "directConnectFlag": false,
-        "connectSource": "ZHONGHUI",
-        "cityCode": "concepcion",
-        "supplierName": "chris测试酒店(去哪儿网（天津）国际旅行社有限公司)_代理商",
-        "city": "康塞普西翁",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL5_LUXURIOUS",
-        "country": "智利"
+        "city": "康塞普西翁"
       }, {
         "province": "黑龙江",
-        "hotelSeq": "mudanjiang_5702",
         "hotelId": 15282657,
         "hotelName": "牡丹江市爱民区牡丹宴商务酒店",
-        "supplierId": 733263,
-        "qid": "100585463",
-        "hotelInName": "牡丹江市爱民区牡丹宴商务酒店",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "mudanjiang",
-        "supplierName": "牡丹江市爱民区牡丹宴商务酒店",
-        "city": "牡丹江",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL2_OTHER",
-        "country": "中国"
+        "city": "牡丹江"
       }, {
         "province": "重庆",
-        "hotelSeq": "chongqing_city_7951",
         "hotelId": 68917,
         "hotelName": "重庆精通一心酒店",
-        "supplierId": 67415,
-        "qid": "100034167",
-        "hotelInName": "Jingtong Yixin Hotel Chongqing Yongchuan Main South Gate",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "chongqing_city",
-        "supplierName": "重庆精通一心酒店",
-        "city": "重庆",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL2_OTHER",
-        "country": "中国"
+        "city": "重庆"
       }, {
         "province": "浙江",
-        "hotelSeq": "jiaxing_11150",
         "hotelId": 43283325,
         "hotelName": "乌镇梦幻风情客栈",
-        "supplierId": 1174506,
-        "qid": "100950093",
-        "hotelInName": "乌镇梦幻风情客栈",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "jiaxing",
-        "supplierName": "乌镇梦幻风情客栈",
-        "city": "嘉兴",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL2_OTHER",
-        "country": "中国"
+        "city": "嘉兴"
       }, {
         "province": "内蒙古",
-        "hotelSeq": "huhehaote_5014",
         "hotelId": 5004227,
         "hotelName": "呼和浩特心想是城主题公寓酒店二分店",
-        "supplierId": 547370,
-        "qid": "100516976",
-        "hotelInName": "呼和浩特心想是城主题公寓酒店二分店",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "huhehaote",
-        "supplierName": "呼和浩特心想是城主题公寓酒店(二分店)",
-        "city": "呼和浩特",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL2_OTHER",
-        "country": "中国"
+        "city": "呼和浩特"
       }, {
         "province": "新疆",
-        "hotelSeq": "test_only2_11",
         "hotelId": 42255990,
         "hotelName": "卡亚木库卡库卡葫芦单体测试酒店（测试酒店，请勿下单，订单无效）",
-        "supplierId": 1144536,
-        "qid": null,
-        "hotelInName": "卡亚木库卡库卡葫芦单体测试酒店（测试酒店，请勿下单，订单无效）",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "test_only2",
-        "supplierName": "bongshakalaka-闪住",
-        "city": "卡亚木库卡库卡",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL5_LUXURIOUS",
-        "country": "中国"
+        "city": "卡亚木库卡库卡"
       }, {
         "province": "广东",
-        "hotelSeq": "guangzhou_9216",
         "hotelId": 8423606,
         "hotelName": "7天酒店广州花都火车北站秀全公园店",
-        "supplierId": 611897,
-        "qid": "5486c5fae4b0e514df34074f",
-        "hotelInName": "7天酒店广州花都火车北站秀全公园店",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "guangzhou",
-        "supplierName": "7天酒店广州花都火车北站店",
-        "city": "广州",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL1_ECONOMICAL",
-        "country": "中国"
+        "city": "广州"
       }, {
         "province": "新疆",
-        "hotelSeq": "test_only2_4",
         "hotelId": 531808,
         "hotelName": "卡亚木库卡库卡QTA国内测试酒店（测试酒店，请勿下单，订单无效）",
-        "supplierId": 332122,
-        "qid": "54c10407e4b05694c97e856d",
-        "hotelInName": "卡亚木库卡库卡QTA国内测试酒店（测试酒店，请勿下单，订单无效）",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "test_only2",
-        "supplierName": "卡亚木库卡库卡客满满测试酒店",
-        "city": "卡亚木库卡库卡",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL2_OTHER",
-        "country": "中国"
+        "city": "卡亚木库卡库卡"
       }, {
         "province": "新疆",
-        "hotelSeq": "test_only2_18",
         "hotelId": 34023876,
         "hotelName": "卡亚布库卡库卡亚县大酒店",
-        "supplierId": 946137,
-        "qid": "100673310",
-        "hotelInName": "卡亚布库卡库卡亚县大酒店",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "test_only2",
-        "supplierName": "测试酒店test",
-        "city": "卡亚木库卡库卡",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL2_OTHER",
-        "country": "中国"
+        "city": "卡亚木库卡库卡"
       }, {
         "province": "山东",
-        "hotelSeq": "yantai_3947",
         "hotelId": 55000,
         "hotelName": "长岛老侯渔家",
-        "supplierId": 54030,
-        "qid": "5486c348e4b0fcc94258b1d3",
-        "hotelInName": "Long Island old Hou fishing",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "yantai",
-        "supplierName": "长岛老侯渔家",
-        "city": "烟台",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL2_OTHER",
-        "country": "中国"
+        "city": "烟台"
       }, {
         "province": "河北",
-        "hotelSeq": "langfang_3197",
         "hotelId": 184398,
         "hotelName": "廊坊坤厚商务酒店",
-        "supplierId": 186937,
-        "qid": "5486c9b0e4b0fcc942590c51",
-        "hotelInName": "廊坊坤厚商务酒店",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "langfang",
-        "supplierName": "廊坊坤厚商务宾馆",
-        "city": "廊坊",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL2_OTHER",
-        "country": "中国"
+        "city": "廊坊"
       }, {
         "province": "四川",
-        "hotelSeq": "chengdu_21536",
         "hotelId": 61536000,
         "hotelName": "成都窝心的小窝808公寓",
-        "supplierId": 1497579,
-        "qid": "102746839",
-        "hotelInName": "成都窝心的小窝808公寓",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "chengdu",
-        "supplierName": "成都窝心的小窝808公寓",
-        "city": "成都",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL2_OTHER",
-        "country": "中国"
+        "city": "成都"
       }, {
         "province": "河北",
-        "hotelSeq": "qinhuangdao_5229",
         "hotelId": 583,
         "hotelName": "秦皇岛旭日海景公寓",
-        "supplierId": 564,
-        "qid": null,
-        "hotelInName": "秦皇岛旭日海景公寓",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": null,
-        "cityCode": "qinhuangdao",
-        "supplierName": "秦皇岛旭日海景公寓",
-        "city": "秦皇岛",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL2_OTHER",
-        "country": "中国"
+        "city": "秦皇岛"
       }, {
         "province": "云南",
-        "hotelSeq": "kunming_8433",
         "hotelId": 43194900,
         "hotelName": "昆明长水机场逸兰酒店",
-        "supplierId": 1163346,
-        "qid": "100955161",
-        "hotelInName": "KUNMINGCHANGSHUIJICHANGYILANBINGUAN",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "kunming",
-        "supplierName": "昆明空港经济区逸兰宾馆",
-        "city": "昆明",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL2_OTHER",
-        "country": "中国"
+        "city": "昆明"
       }, {
         "province": "河南",
-        "hotelSeq": "zhengzhou_11426",
         "hotelId": 42206463,
         "hotelName": "郑州雅居生活馆酒店公寓",
-        "supplierId": 1143156,
-        "qid": "100912230",
-        "hotelInName": "郑州雅居生活馆酒店公寓",
-        "directSingle": true,
-        "directConnectFlag": false,
-        "connectSource": "",
-        "cityCode": "zhengzhou",
-        "supplierName": "郑州雅居生活馆酒店公寓",
-        "city": "郑州",
-        "checked": true,
-        "currenyVo": {
-          "currencyDesc": "人民币",
-          "currencySymbol": "元",
-          "currencyCode": "CNY"
-        },
-        "level": "LEVEL2_OTHER",
-        "country": "中国"
+        "city": "郑州"
       }
     ],
     ret : true
