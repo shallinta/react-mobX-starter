@@ -1,40 +1,17 @@
 @reset-global pc;
 
-.dev-tools-intro {
-  position: fixed;
-  top: -1px;
-  right: 0;
-  width: 350px;
-  height: 100px;
-  font-size: 12px;
-  color: #999;
-  border: 1px dashed #999;
-  & .dev-tools-intro-0 {
-    padding-left: 10px;
-    line-height: 2;
-    color: #333;
-  }
-  & .dev-tools-intro-1 {
-    position: absolute;
-    top: 30px;
-    right: 135px;
-  }
-  & .dev-tools-intro-2 {
-    position: absolute;
-    top: 50px;
-    right: 90px;
-  }
-  & .dev-tools-intro-3 {
-    position: absolute;
-    top: 70px;
-    right: 45px;
-  }
-}
+:global {
+  & .wrapper {
 
-#app {
+    & .page-container {
 
-}
+    }
 
-.wrapper {
-
+    & .page-loading, & .page-error {
+      margin: 50px auto;
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+    }
+  }
 }

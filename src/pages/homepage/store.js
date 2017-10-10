@@ -1,3 +1,7 @@
+/**
+ * 经典store文件示例
+ */
+
 import { observable, computed, action, runInAction, transaction, useStrict } from 'mobx';
 import Ajax from 'ajax';
 

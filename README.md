@@ -1,6 +1,8 @@
 # react-mobx-starter
 
-
+## Css Modules 说明
+- 全局样式书写时，用`:global`包裹；使用时，使用`className="class"`
+- 局部样式直接书写，使用时，使用`styleName="class"`
 
 ## 目录结构
 

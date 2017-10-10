@@ -1,5 +1,45 @@
 @import '../../common/styles/common.css';
 
-.page-container {
+html, body {
+  height: 100%;
+  & :global(#app) {
+    height: 100%;
+    display: flex;
+  }
+  & :global(.wrapper) {
+    flex: 1;
+    display: flex;
+  }
+}
 
+.page-container {
+  flex: 1;
+  padding: 20px;
+  background: #dedede;
+
+  & .header {
+    margin: 20px 0;
+    font-size: 24px;
+    color: #333;
+  }
+
+  & .title {
+    font-size: 16px;
+    color: #666;
+    text-indent: 2em;
+  }
+
+  & .content {
+    margin: 20px 60px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f8f8f8;
+    font-size: 14px;
+    color: #666;
+
+    & .hotel-list-item {
+      padding: 10px 0;
+      text-indent: 2em;
+    }
+  }
 }

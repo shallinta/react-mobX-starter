@@ -19,6 +19,10 @@ export default (packing) => {
   p.hot = true;
   p.sourceMap = true;
 
+  // 开启css-modules
+  p.cssModules = true;
+  p.cssModulesIdentName = '[name]-[local]-[hash:base64:5]';
+
   p.commonChunks = {
     vendor: [
       'react',

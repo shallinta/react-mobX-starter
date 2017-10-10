@@ -1,39 +1,23 @@
+/**
+ * 页面示例
+ */
+
 import React from 'react';
-import { observable, action, computed } from 'mobx';
+import { action } from 'mobx';
 import { observer } from 'mobx-react';
-import Ajax from 'packing-ajax';
+import TimeStore from './time-store';
 import './style.css';
-
-// const state = observable({
-//   title: 'Current Time',
-//   time: 0,
-//   get localeDate() {
-//     return new Date(this.time).toLocaleDateString();
-//   }
-// });
-
-// const localeTime = computed(() => new Date(state.time).toLocaleTimeString());
-
-// autorun(() => {
-//   console.log('时间更新为：%d', state.localeTime);
-// });
 
 @observer
 class Page extends React.Component {
 
-  @observable
-  store = {
-    title: 'Current Time',
-    time: 0,
-    get localeDate() {
-      return new Date(this.time).toLocaleDateString();
-    },
-    off: false
+  componentWillMount() {
+    this.timeStore = {};
+    this.props.store.getHotelList();
   }
 
-  @computed
-  get localeTime() {
-    return new Date(this.store.time).toLocaleTimeString();
+  componentDidMount() {
+    this.timeStore = new TimeStore();
   }
 
   componentWillReact() {
@@ -42,29 +26,40 @@ class Page extends React.Component {
 
   @action.bound
   handleClick() {
-    Ajax({
-      url: '/api/getTimestamp',
-      success: action('取到新时间', (res) => {
-        this.store.time = res.now;
-      })
-    });
-  }
-
-  @action.bound
-  handleAddRemark() {
-    this.store.remark = `新增属性不会被观察，只会在其他被观察的属性改变、触发react组件更新时，随之更新到使用的地方， ${Math.random() * 100}`;
+    this.timeStore.stopTime();
   }
 
   render() {
+    const { loadStatus, username, hotelList, hotelsCount } = this.props.store;
+    const { timestamp, date, wastedTime } = this.timeStore;
+
+    if (loadStatus === 0) {
+      return (
+        <div className="page-loading">加载中...</div>
+      );
+    }
+
+    if (loadStatus === -1) {
+      return (
+        <div className="page-error">加载失败</div>
+      );
+    }
+
     return (
-      <div>
-        {this.store.title} :
-        <span className="time"> {this.store.time}</span>
-        <button onClick={this.handleClick}>获取时间</button>
-        <button onClick={this.handleAddRemark}>新增备注</button>
-        <p>日期：{this.store.localeDate}</p>
-        <p>时间：{this.localeTime}</p>
-        <p>{this.store.remark}</p>
+      <div className="page-container" styleName="page-container">
+        <div styleName="timestamp">
+          <span>时间戳：{ timestamp }</span>
+          <span>日期：{ date }</span>
+          <span>此网页打开后已经过：{ wastedTime } 秒</span>
+          <button onClick={this.handleClick}>停止时间滚动</button>
+        </div>
+        <div styleName="header">{ username }</div>
+        <div styleName="title">{ `共有${hotelsCount}家酒店` }</div>
+        <div styleName="content">
+          <ul>
+            { hotelList.map(hotel => (<li key={`hotel-${hotel.hotelId}`} styleName="hotel-list-item">{ hotel.hotelName }</li>)) }
+          </ul>
+        </div>
       </div>
     );
   }

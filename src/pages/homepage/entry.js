@@ -1,12 +1,22 @@
+/**
+ * 页面入口示例
+ * 1. 包含了不必要的 “MobX DevTools 功能说明” 浮层
+ * 2. 实例化最高层store使用示例
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DevTools from 'mobx-react-devtools';
 import Page from '.';
+import Store from './store';
 
-const dom = document.getElementById('app');
+const store = new Store({
+  username: '第一帅'
+});
+
 const App = () => (
   <div className="wrapper">
-    <Page />
+    <Page store={store} />
     <DevTools />
     <div className="dev-tools-intro">
       <span className="dev-tools-intro-0">MobX DevTools 功能说明：</span>
@@ -16,6 +26,8 @@ const App = () => (
     </div>
   </div>
 );
+
+const dom = document.getElementById('app');
 
 ReactDOM.render(
   <App />,

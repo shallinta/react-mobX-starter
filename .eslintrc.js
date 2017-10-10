@@ -4,6 +4,7 @@ module.exports = {
   ].map(require.resolve),
   rules: {
     'react/prefer-stateless-function': 0,
-    'react/prop-types': 0
+    'react/prop-types': 0,
+    'import/extensions': 0
   }
 };

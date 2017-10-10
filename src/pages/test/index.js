@@ -30,12 +30,12 @@ class Page extends React.Component {
     }
 
     return (
-      <div className="page-container">
-        <div className="header">{ username }</div>
-        <div className="title">{ `共有${hotelsCount}家酒店` }</div>
-        <div className="content">
+      <div className="page-container" styleName="page-container">
+        <div styleName="header">{ username }</div>
+        <div styleName="title">{ `共有${hotelsCount}家酒店` }</div>
+        <div styleName="content">
           <ul>
-            { hotelList.map(hotel => (<li key={`hotel-${hotel.hotelId}`} className="hotel-list-item">{ hotel.hotelName }</li>)) }
+            { hotelList.map(hotel => (<li key={`hotel-${hotel.hotelId}`} styleName="hotel-list-item">{ hotel.hotelName }</li>)) }
           </ul>
         </div>
       </div>

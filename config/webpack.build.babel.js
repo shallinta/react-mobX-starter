@@ -7,18 +7,33 @@
  * @param object appConfig config/packing.js中的配置
  */
 
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+
 export default (webpackConfig, program, appConfig) => {
   const config = webpackConfig;
-  // webpackConfig 为系统默认的webpack配置，此处可以根据项目情况修改
-  // 修改 entry
-  // config.entry = 'xxx/xxx.js';
-  // 修改 plugins（修改 ＝ 先删除现有的，再添加新的）
-  // config.plugins = config.plugins.filter(plugin => !(plugin.filename && plugin.id));
-  // config.plugins.push(
-  //   new ExtractTextPlugin({
-  //     filename: '[name]-[contenthash:8].css',
-  //     allChunks: true
-  //   })
-  // )
+
+  if (!config.resolve.alias) {
+    config.resolve.alias = {};
+  }
+  config.resolve.alias.ajax = 'common/utils/ajax.js';
+
+  if (appConfig.cssModules) {
+    let cssModulesIdentName = '[path][name]__[local]--[hash:base64:5]';
+    if (appConfig.cssModulesIdentName) {
+      cssModulesIdentName = appConfig.cssModulesIdentName;
+    }
+    config.module.rules.forEach((rule) => {
+      if (rule.test.test('.css')) {
+        rule.loader = ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            { loader: 'css-loader', options: { importLoaders: 2, minimize: true, module: true, localIdentName: cssModulesIdentName } },
+            { loader: 'postcss-loader' }
+          ]
+        });
+      }
+    });
+  }
+
   return config;
 };
