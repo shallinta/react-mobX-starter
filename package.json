@@ -11,6 +11,7 @@
     "serve": "packing serve",
     "serve:dist": "packing build && packing serve-dist",
     "eslint": "echo '\"npm run eslint\" will be scrapped in version 3. Please use \"npm run lint\" instead' && npm run lint",
+    "release": "standard-version",
     "lint": "eslint src"
   },
   "pre-commit": [
@@ -29,7 +30,8 @@
     "react-a11y": "^0.3.3",
     "react-dom": "^15.4.2",
     "react-transform-catch-errors": "^1.0.2",
-    "redbox-react": "^1.3.3"
+    "redbox-react": "^1.3.3",
+    "standard-version": "^4.2.0"
   },
   "devDependencies": {
     "eslint": "^3.19.0",

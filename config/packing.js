@@ -45,7 +45,9 @@ export default (packing) => {
     // 网站URL与模版的对应路由关系
     '^/$': '/homepage/index.pug',
     // API转发
-    '^/api/(.*)': 'require!/mock/api/$1.js'
+    '^/api/(.*)': 'require!/mock/api/$1.js',
+
+    '^/ebooking/web/api': 'http://ebooking.qunar.com/ebooking/web/api'
   };
 
   return p;
