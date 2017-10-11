@@ -4,7 +4,11 @@ import DevTools from 'mobx-react-devtools';
 import Page from '.';
 import Store from './store';
 
-const store = new Store();
+const store = Store.create({
+  loadStatus: 0,
+  username: 'DiYi Shuai',
+  hotelList: []
+});
 
 const App = () => (
   <div className="wrapper">

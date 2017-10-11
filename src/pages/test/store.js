@@ -1,30 +1,26 @@
-import { observable, computed, action, runInAction, transaction, useStrict } from 'mobx';
+import { types, applySnapshot } from 'mobx-state-tree';
 import Ajax from 'ajax';
 
-useStrict(true);
+const Hotel = types.model('Hotel', {
+  province: types.string,
+  hotelId: types.number,
+  hotelName: types.string,
+  city: types.string
+});
 
-export default class Store {
-
-  id = Math.random();
-
-  @observable loadStatus = 1;
-  @observable username = '';
-  @observable hotelList = [];
-
-  @computed get hotelsCount() {
-    return this.hotelList.length;
+const Store = types.model('Store', {
+  loadStatus: types.number,
+  username: types.string,
+  hotelList: types.array(Hotel)
+}).views(self => ({
+  get hotelsCount() {
+    return self.hotelList.length;
   }
-
-  constructor(config) {
-    if (config && config.username) {
-      this.username = config.username;
-    } else {
-      this.username = '未登录';
-    }
-  }
-
-  @action('获取酒店列表') async getHotelList() {
-    this.loadStatus = 0;
+})).actions(self => ({
+  async getHotelList() {
+    self.apply({
+      loadStatus: 0
+    });
     const res = await Ajax({
       url: '/api/hotelList',
       type: 'GET',
@@ -33,22 +29,26 @@ export default class Store {
       }
     });
     if (res && res.ret) {
-      runInAction('酒店列表返回结果', () => {
-        if (res.data) {
-          transaction(() => {
-            this.loadStatus = 1;
-            this.hotelList = res.data;
-          });
-        } else {
-          this.loadStatus = -1;
-        }
-      });
+      if (res.data) {
+        self.apply({
+          loadStatus: 1,
+          hotelList: res.data
+        });
+      } else {
+        self.apply({
+          loadStatus: -1
+        });
+      }
     } else {
-      runInAction('酒店列表请求出错', () => {
-        this.loadStatus = -1;
-        console.log(res.errmsg || `未知错误。错误代码：${res.errcode}`);
+      self.apply({
+        loadStatus: -1
       });
+      console.log(res.errmsg || `未知错误。错误代码：${res.errcode}`);
     }
+  },
+  apply(snapshot) {
+    applySnapshot(self, Object.assign({}, self, snapshot));
   }
+}));
 
-}
+export default Store;
