@@ -1,12 +1,13 @@
 import React from 'react';
 import { observer } from 'mobx-react';
+import store from './store';
 import './style.css';
 
 @observer
 class Page extends React.Component {
 
   componentWillMount() {
-    this.props.store.getHotelList();
+    store.getHotelList();
   }
 
   componentWillReact() {
@@ -15,7 +16,7 @@ class Page extends React.Component {
 
   render() {
     console.log('render');
-    const { loadStatus, username, hotelList, hotelsCount } = this.props.store;
+    const { loadStatus, username, hotelList, hotelsCount } = store;
 
     if (loadStatus === 0) {
       return (

@@ -5,6 +5,7 @@
 import React from 'react';
 import { action } from 'mobx';
 import { observer } from 'mobx-react';
+import store from './store';
 import TimeStore from './time-store';
 import './style.css';
 
@@ -13,7 +14,7 @@ class Page extends React.Component {
 
   componentWillMount() {
     this.timeStore = {};
-    this.props.store.getHotelList();
+    store.getHotelList();
   }
 
   componentDidMount() {
@@ -30,7 +31,7 @@ class Page extends React.Component {
   }
 
   render() {
-    const { loadStatus, username, hotelList, hotelsCount } = this.props.store;
+    const { loadStatus, username, hotelList, hotelsCount } = store;
     const { timestamp, date, wastedTime } = this.timeStore;
 
     if (loadStatus === 0) {

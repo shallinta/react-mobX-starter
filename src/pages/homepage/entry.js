@@ -8,15 +8,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import DevTools from 'mobx-react-devtools';
 import Page from '.';
-import Store from './store';
-
-const store = new Store({
-  username: '第一帅'
-});
 
 const App = () => (
   <div className="wrapper">
-    <Page store={store} />
+    <Page />
     <DevTools />
     <div className="dev-tools-intro">
       <span className="dev-tools-intro-0">MobX DevTools 功能说明：</span>

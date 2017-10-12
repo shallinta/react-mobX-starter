@@ -12,6 +12,25 @@ html, body {
   }
 }
 
+:global {
+  & .mst-time-trival {
+    position: fixed;
+    top: 40px;
+    right: 0;
+    width: 60px;
+    & .mst-time-trival-prev, & .mst-time-trival-next {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      margin-bottom: 10px;
+      border: 1px solid #999;
+      color: #f33;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}
+
 .page-container {
   flex: 1;
   padding: 20px;

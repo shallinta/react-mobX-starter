@@ -2,12 +2,12 @@
  * 经典store文件示例
  */
 
-import { observable, computed, action, runInAction, transaction, useStrict } from 'mobx';
+import { observable, computed, action, runInAction, useStrict } from 'mobx';
 import Ajax from 'ajax';
 
 useStrict(true);
 
-export default class Store {
+class Store {
 
   id = Math.random();
 
@@ -39,10 +39,8 @@ export default class Store {
     if (res && res.ret) {
       runInAction('酒店列表返回结果', () => {
         if (res.data) {
-          transaction(() => {
-            this.loadStatus = 1;
-            this.hotelList = res.data;
-          });
+          this.loadStatus = 1;
+          this.hotelList = res.data;
         } else {
           this.loadStatus = -1;
         }
@@ -54,5 +52,10 @@ export default class Store {
       });
     }
   }
-
 }
+
+const store = new Store({
+  username: '第一帅'
+});
+
+export default store;
