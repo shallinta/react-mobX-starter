@@ -1,0 +1,12 @@
+@import '{{pathLayers}}common/styles/common.css';
+
+html, body {
+  & :global(#app) {
+    height: 100%;
+    display: flex;
+  }
+}
+
+.content-container {
+
+}
