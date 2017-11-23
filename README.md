@@ -40,11 +40,11 @@ node newpage about 关于
 创建同一目录下多页面时，使用目录+页面名，例如：
 
 ``` sh
-# 资源位管理 列表页
-node newpage resources-manage/index
+# 成员管理 列表页
+node newpage members-manage/index
 
-# 资源位管理 详情页
-node newpage resources-manage/detail
+# 成员管理 详情页
+node newpage members-manage/detail
 ```
 
 
